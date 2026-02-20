@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f0f4f8;
+  color: #1a1a2e;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar { width: 0; height: 0; }
+* { scrollbar-width: none; }
+
+/* Input focus */
+input:focus, select:focus, textarea:focus {
+  border-color: #6A8EAE !important;
+  box-shadow: 0 0 0 3px rgba(106,142,174,0.15) !important;
+}
+
+/* Smooth transitions */
+button { transition: all 0.2s ease; }
+button:active { transform: scale(0.97); }
+
+/* PWA safe areas */
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* Selection color */
+::selection {
+  background: rgba(106, 142, 174, 0.25);
+}
